@@ -385,6 +385,41 @@
                                             fontWeight: 500,
                                             color: "var(--red)",
                                             children: (null === (o = e.metaData) || void 0 === o ? void 0 : o.name) || "Unknown Gangster"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 240,
+                                            color: "gray.700",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(4).trait_type + ": " + o.attributes.at(4).value) || "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 240,
+                                            color: "gray.700",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(5).trait_type + ": " + o.attributes.at(5).value) || "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 240,
+                                            color: "gray.700",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(6).trait_type + ": " + o.attributes.at(6).value) || "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 240,
+                                            color: "gray.700",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(7).trait_type + ": " + o.attributes.at(7).value) || "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 240,
+                                            color: "gray.700",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(8).trait_type + ": " + o.attributes.at(8).value) || "-"
                                         })]
                                     })]
                                 })
