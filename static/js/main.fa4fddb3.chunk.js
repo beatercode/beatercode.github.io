@@ -374,12 +374,8 @@
                                     }), Object(C.jsxs)(_.b, {
                                         pt: 10,
                                         align: "center",
-                                        children: [Object(C.jsx)(b.a, {
-                                            color: "gray.500",
-                                            fontSize: "sm",
-                                            textTransform: "uppercase",
-                                            children: "GEN 1"
-                                        }), Object(C.jsx)(g.a, {
+                                        children: [
+                                            Object(C.jsx)(g.a, {
                                             fontSize: "2xl",
                                             fontFamily: "body",
                                             fontWeight: 500,
