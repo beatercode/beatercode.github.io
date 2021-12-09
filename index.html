@@ -17,8 +17,21 @@
     <script>
 
         window.onload = function loadCheckPrev() {
+            
+            /*
             if(document.referrer.includes("/my-bunnies")) {
                 document.getElementById("myBunnyButton").click();
+            }
+            */
+           
+            if (typeof window.ethereum !== 'undefined') {
+                console.log('MetaMask is installed!');
+                try {
+                    window.ethereum.request({ method: 'eth_requestAccounts' });
+                    document.getElementById("myConnectButton").click();
+                } catch (error) {
+                    console.log("Diocane: " + error);
+                }
             }
         }
 

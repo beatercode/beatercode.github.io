@@ -758,7 +758,7 @@
                                             cacheProvider: !0,
                                             disableInjectedProvider: !1,
                                             providerOptions: a
-                                        })).clearCachedProvider(), e.next = 6, n.connect();
+                                        })), e.next = 6, n.connect();
                                     case 6:
                                         return i = e.sent, r = new D.a(i), e.prev = 8, e.next = 11, r.eth.getAccounts();
                                     case 11:
@@ -873,12 +873,13 @@
                                 children: Object(G.jsx)(F.a, {
                                     rounded: "full",
                                     size: t || "lg",
+                                    id: "myConnectButton",
                                     fontWeight: "normal",
                                     px: 6,
                                     onClick: function(e) {
                                         e.preventDefault(), a(V())
                                     },
-                                    children: "Connect Wallet v3"
+                                    children: "Connect Wallet"
                                 })
                             }), "" !== n.errorMsg ? Object(G.jsx)(v.h, {
                                 children: n.errorMsg

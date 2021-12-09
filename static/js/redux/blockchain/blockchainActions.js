@@ -51,7 +51,7 @@ export const connect = () => {
         };
 
         const web3Modal = new Web3Modal({
-            cacheProvider: true,
+            cacheProvider: false,
             disableInjectedProvider: false,
             providerOptions,
         });
