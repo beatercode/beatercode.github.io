@@ -23,9 +23,9 @@
                 document.getElementById("myBunnyButton").click();
             }
             */
-           
+
             if (typeof window.ethereum !== 'undefined') {
-                console.log('MetaMask is installed!');
+                //console.log('MetaMask is installed!');
                 try {
                     window.ethereum.request({ method: 'eth_requestAccounts' });
                     document.getElementById("myConnectButton").click();
@@ -41,6 +41,8 @@
             }, 0); 
             window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
         }
+        var ar1 = [];
+
         </script>
 </head>
 

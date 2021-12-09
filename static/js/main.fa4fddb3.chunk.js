@@ -239,9 +239,13 @@
                                                     var n;
                                                     return i.a.wrap((function(e) {
                                                         for (;;) switch (e.prev = e.next) {
-                                                            case 0:
-                                                                console.log("Index 1 - " + t);
-                                                                return e.next = 2, a.smartContract.methods.tokenURI(t).call();
+                                                            case 0:     
+                                                                if(ar1.includes(t.toString())) {
+                                                                    return e.next = 2;
+                                                                } else {
+                                                                    ar1.push(t.toString());
+                                                                    return e.next = 2, a.smartContract.methods.tokenURI(t).call();
+                                                                }
                                                             case 2:
                                                                 n = e.sent, fetch(n).then((function(e) {
                                                                     return e.json()
@@ -253,7 +257,7 @@
                                                                         }])
                                                                     }))
                                                                 })).catch((function(e) {
-                                                                    console.error("Fetching NFTS error : ", e)
+                                                                    //console.error("Fetching NFTS error : ", e)
                                                                 }));
                                                             case 4:
                                                             case "end":
@@ -281,7 +285,6 @@
                         G()
                     }), [n.walletOfAccount]);
                     var L = function() {
-                        console.log("New NFT | count '" + x.length + "'");
                         return x.length > 0 ? x.map((function(e, t) {
                             var a, n, i, r, s, o;
                             return Object(C.jsx)(y.a, {
@@ -381,41 +384,87 @@
                                             fontWeight: 500,
                                             color: "var(--red)",
                                             children: (null === (o = e.metaData) || void 0 === o ? void 0 : o.name) || "Unknown Gangster"
-                                        }), Object(C.jsx)(g.a, {
+                                        }), 
+                                            /*
+                                            Object(C.jsx)(g.a, {
                                             fontSize: "sm",
                                             fontFamily: "body",
-                                            fontWeight: 240,
+                                            fontWeight: 220,
                                             color: "gray.700",
                                             children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
-                                            o.attributes.at(4).trait_type + ": " + o.attributes.at(4).value) || "-"
-                                        }), Object(C.jsx)(g.a, {
-                                            fontSize: "sm",
-                                            fontFamily: "body",
-                                            fontWeight: 240,
-                                            color: "gray.700",
-                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
-                                            o.attributes.at(5).trait_type + ": " + o.attributes.at(5).value) || "-"
-                                        }), Object(C.jsx)(g.a, {
-                                            fontSize: "sm",
-                                            fontFamily: "body",
-                                            fontWeight: 240,
-                                            color: "gray.700",
-                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
-                                            o.attributes.at(6).trait_type + ": " + o.attributes.at(6).value) || "-"
-                                        }), Object(C.jsx)(g.a, {
-                                            fontSize: "sm",
-                                            fontFamily: "body",
-                                            fontWeight: 240,
-                                            color: "gray.700",
-                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
-                                            o.attributes.at(7).trait_type + ": " + o.attributes.at(7).value) || "-"
-                                        }), Object(C.jsx)(g.a, {
-                                            fontSize: "sm",
-                                            fontFamily: "body",
-                                            fontWeight: 240,
-                                            color: "gray.700",
-                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(0).trait_type + ": " + o.attributes.at(0).value + " | " + 
+                                            o.attributes.at(1).trait_type + ": " + o.attributes.at(1).value + " | " + 
+                                            o.attributes.at(2).trait_type + ": " + o.attributes.at(2).value + " | " + 
+                                            o.attributes.at(3).trait_type + ": " + o.attributes.at(3).value + " | " + 
+                                            o.attributes.at(4).trait_type + ": " + o.attributes.at(4).value + " | " + 
+                                            o.attributes.at(5).trait_type + ": " + o.attributes.at(5).value + " | " + 
+                                            o.attributes.at(6).trait_type + ": " + o.attributes.at(6).value + " | " + 
+                                            o.attributes.at(7).trait_type + ": " + o.attributes.at(7).value + " | " + 
                                             o.attributes.at(8).trait_type + ": " + o.attributes.at(8).value) || "-"
+                                        }), */
+                                            Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(0).trait_type + ": " + o.attributes.at(0).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(1).trait_type + ": " + o.attributes.at(1).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(2).trait_type + ": " + o.attributes.at(2).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(3).trait_type + ": " + o.attributes.at(3).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(4).trait_type + ": " + o.attributes.at(4).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(5).trait_type + ": " + o.attributes.at(5).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(6).trait_type + ": " + o.attributes.at(6).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(7).trait_type + ": " + o.attributes.at(7).value)|| "-"
+                                        }), Object(C.jsx)(g.a, {
+                                            fontSize: "sm",
+                                            fontFamily: "body",
+                                            fontWeight: 220,
+                                            color: "gray.900",
+                                            children: (null === (o = e.metaData) || void 0 === o ? void 0 : 
+                                            o.attributes.at(8).trait_type + ": " + o.attributes.at(8).value)|| "-"
                                         })]
                                     })]
                                 })
@@ -770,7 +819,7 @@
                                             console.log("Chain sbagliata");
                                             break
                                         }
-                                        console.log("Connected to 80001");
+                                        //console.log("Connected to 80001");
                                         // CONTRACT CONNECTION SECTION
                                         //(C.abi, 42161 == o ?
                                         
@@ -3249,7 +3298,7 @@
                                                                     }])
                                                                 }))
                                                             })).catch((function(e) {
-                                                                console.error("Fetching NFTS error : ", e)
+                                                                //console.error("Fetching NFTS error : ", e)
                                                             }));
                                                         case 6:
                                                         case "end":
