@@ -20,18 +20,18 @@
     <meta data-n-head="1" data-hid="author" name="author" content="Avalanche Bayc">
     <meta data-n-head="1" data-hid="charset" charset="utf-8">
     <meta data-n-head="1" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
-    <link data-n-head="1" rel="stylesheet" type="text/css" href="./assets/css/vendor.bundle.css?ver=1930">
-    <link data-n-head="1" rel="stylesheet" type="text/css" href="./assets/css/style-zinnia_blue.css?ver=1930">
-    <link data-n-head="1" data-hid="shortcut-icon" rel="shortcut icon" href="./_nuxt/icons/icon_64x64.c646bb.png">
-    <link data-n-head="1" data-hid="apple-touch-icon" rel="apple-touch-icon" href="./_nuxt/icons/icon_512x512.c646bb.png" sizes="512x512">
+    <link data-n-head="1" rel="stylesheet" type="text/css" href="/assets/css/vendor.bundle.css?ver=1930">
+    <link data-n-head="1" rel="stylesheet" type="text/css" href="/assets/css/style-zinnia_blue.css?ver=1930">
+    <link data-n-head="1" data-hid="shortcut-icon" rel="shortcut icon" href="/_nuxt/icons/icon_64x64.c646bb.png">
+    <link data-n-head="1" data-hid="apple-touch-icon" rel="apple-touch-icon" href="/_nuxt/icons/icon_512x512.c646bb.png" sizes="512x512">
     <link data-n-head="1" rel="manifest" href="/_nuxt/manifest.1c469b87.json" data-hid="manifest">
     <script data-n-head="1" src="./assets/js/jquery.bundle.js?ver=1930"></script>
     <script data-n-head="1" src="./assets/js/scripts.js?ver=1930"></script>
     <script data-n-head="1" src="./assets/js/charts.js?var=161"></script>
-    <link rel="preload" href="./_nuxt/a8f7314.js" as="script">
-    <link rel="preload" href="./_nuxt/f47240d.js" as="script">
-    <link rel="preload" href="./_nuxt/b46c60b.js" as="script">
-    <link rel="preload" href="./_nuxt/08a91be.js" as="script"> 
+    <link rel="preload" href="/_nuxt/a8f7314.js" as="script">
+    <link rel="preload" href="/_nuxt/f47240d.js" as="script">
+    <link rel="preload" href="/_nuxt/b46c60b.js" as="script">
+    <link rel="preload" href="/_nuxt/08a91be.js" as="script"> 
 </head>
 
 <script>
@@ -42,6 +42,14 @@ window.addEventListener('error', e => {
     window.location.reload();
   }
 });
+
+        window.onbeforeunload = function() { 
+            window.setTimeout(function () { 
+                window.location = '/';
+            }, 0); 
+            window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
+        }
+        var ar1 = [];
 
 const origin = console.error;
     console.error = (error) => {
@@ -175,10 +183,10 @@ const origin = console.error;
             }
         }
     </script>
-    <script src="./_nuxt/a8f7314.js"></script>
-    <script src="./_nuxt/f47240d.js"></script>
-    <script src="./_nuxt/b46c60b.js"></script>
-    <script src="./_nuxt/08a91be.js"></script>
+    <script src="/_nuxt/a8f7314.js"></script>
+    <script src="/_nuxt/f47240d.js"></script>
+    <script src="/_nuxt/b46c60b.js"></script>
+    <script src="/_nuxt/08a91be.js"></script>
 </body>
 
 </html>
