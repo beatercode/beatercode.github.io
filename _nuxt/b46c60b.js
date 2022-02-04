@@ -4737,7 +4737,7 @@
                                     }, {
                                         hid: "og_url",
                                         name: "og:url",
-                                        content: "http://localhost/"
+                                        content: "https://beatercode.github.io/"
                                     }, {
                                         hid: "og_site_name",
                                         name: "og:site_name",
