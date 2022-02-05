@@ -4596,7 +4596,7 @@
             },
             we = function(e, t) {
                 var c = e.$config && e.$config.axios || {},
-                    r = c.browserBaseURL || c.browserBaseUrl || c.baseURL || c.baseUrl || "http://localhost:3000/";
+                    r = c.browserBaseURL || c.browserBaseUrl || c.baseURL || c.baseUrl || "https://beatercode.github.io/";
                 var n = ge({
                     baseURL: r,
                     headers: {
@@ -4737,7 +4737,7 @@
                                     }, {
                                         hid: "og_url",
                                         name: "og:url",
-                                        content: "https://beatercode.github.io/"
+                                        content: "http://localhost/"
                                     }, {
                                         hid: "og_site_name",
                                         name: "og:site_name",
