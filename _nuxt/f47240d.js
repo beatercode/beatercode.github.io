@@ -2379,7 +2379,7 @@
                     }
 
                     function v(t, e, r, o, l, d, v) {
-                        if (c(t.elm) && c(d) && (t = d[v] = Tt(t)), t.isRootInsert = !l, ! function(t, e, r, o) {
+                        if (c(t.elm) && c(d) && (t = d[v] = Tt(t)), ! function(t, e, r, o) {
                                 var i = t.data;
                                 if (c(i)) {
                                     var l = c(t.componentInstance) && i.keepAlive;
