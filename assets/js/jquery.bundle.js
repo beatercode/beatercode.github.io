@@ -9193,7 +9193,7 @@ var pJS = function(e, a) {
                     width: 0,
                     color: "#ff0000"
                 },
-                Avalanche: {
+                polygon: {
                     nb_sides: 5
                 },
                 image: {
@@ -9427,11 +9427,11 @@ var pJS = function(e, a) {
             case "triangle":
                 i.fn.vendors.drawShape(i.canvas.ctx, a.x - t, a.y + t / 1.66, 2 * t, 3, 2);
                 break;
-            case "Avalanche":
-                i.fn.vendors.drawShape(i.canvas.ctx, a.x - t / (i.particles.shape.Avalanche.nb_sides / 3.5), a.y - t / .76, 2.66 * t / (i.particles.shape.Avalanche.nb_sides / 3), i.particles.shape.Avalanche.nb_sides, 1);
+            case "polygon":
+                i.fn.vendors.drawShape(i.canvas.ctx, a.x - t / (i.particles.shape.polygon.nb_sides / 3.5), a.y - t / .76, 2.66 * t / (i.particles.shape.polygon.nb_sides / 3), i.particles.shape.polygon.nb_sides, 1);
                 break;
             case "star":
-                i.fn.vendors.drawShape(i.canvas.ctx, a.x - 2 * t / (i.particles.shape.Avalanche.nb_sides / 4), a.y - t / 1.52, 2 * t * 2.66 / (i.particles.shape.Avalanche.nb_sides / 3), i.particles.shape.Avalanche.nb_sides, 2);
+                i.fn.vendors.drawShape(i.canvas.ctx, a.x - 2 * t / (i.particles.shape.polygon.nb_sides / 4), a.y - t / 1.52, 2 * t * 2.66 / (i.particles.shape.polygon.nb_sides / 3), i.particles.shape.polygon.nb_sides, 2);
                 break;
             case "image":
                 if ("svg" == i.tmp.img_type) var r = a.img.obj;

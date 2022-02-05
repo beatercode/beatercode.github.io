@@ -1,5 +1,5 @@
 /*!
- * ICOCrypto v1.9.3 by Softnio.
+ * ICOCrypto v1.9.3 by Softnio. 
  **/
 var NioApp = (function(jQ, win, doc) {
     "use strict";
@@ -924,7 +924,7 @@ NioApp = function(NioApp, $, window, document) {
                                     "width": 0,
                                     "color": _pt_shape,
                                 },
-                                "Avalanche": {
+                                "polygon": {
                                     "nb_sides": 5
                                 }
                             },

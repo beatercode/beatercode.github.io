@@ -5,16 +5,16 @@ const options = {
         "debug": false
     },
     "cacheOptions": {
-        "cacheId": "nuxt-prod",
+        "cacheId": "PolygonApes-prod",
         "directoryIndex": "/",
-        "revision": "G9EeDpkLxLli"
+        "revision": "V3G0FlnskdRB"
     },
     "clientsClaim": true,
     "skipWaiting": true,
     "cleanupOutdatedCaches": true,
     "offlineAnalytics": false,
     "preCaching": [{
-        "revision": "G9EeDpkLxLli",
+        "revision": "V3G0FlnskdRB",
         "url": "/?standalone=true"
     }],
     "runtimeCaching": [{

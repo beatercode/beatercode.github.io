@@ -4759,6 +4759,7 @@ a.badge-dark.focus {
 
 .alert-info {
     color: #0c5460;
+    background-color: #d1ecf1;
     border-color: #bee5eb;
 }
 
@@ -8967,11 +8968,11 @@ a.text-dark:focus {
 }
 
 .text-black-50 {
-    color: rgb(255, 255, 255) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .text-white-50 {
-    color: rgb(255, 255, 255) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .text-hide {
@@ -10940,7 +10941,7 @@ a.text-dark:focus {
     content: "\f6d5"
 }
 
-.fa-draw-Avalanche:before {
+.fa-draw-polygon:before {
     content: "\f5ee"
 }
 
@@ -17147,9 +17148,13 @@ screen and (max-height:300px) {
     content: "\e6d1";
 }
 
-/*.ti-themify-favicon:before { content: "\e6d2"; }*/
+.ti-themify-favicon:before {
+    content: "\e6d2";
+}
 
-/*.ti-themify-favicon-alt:before { content: "\e6d3"; }*/
+.ti-themify-favicon-alt:before {
+    content: "\e6d3";
+}
 
 .ti-support:before {
     content: "\e6d4";
@@ -18987,7 +18992,7 @@ table.dataTable td {
 }
 
 .tc-salvia {
-    color: #941c1c !important;
+    color: #118f3a !important;
 }
 
 .tc-salvia-alt {
@@ -19187,7 +19192,7 @@ table.dataTable td {
 }
 
 .bg-salvia {
-    background-color: #941c1c !important;
+    background-color: #118f3a !important;
 }
 
 .bg-salvia-alt {
@@ -19203,11 +19208,11 @@ table.dataTable td {
 }
 
 .bg-salvia-grad {
-    background-image: linear-gradient(45deg, #3c1c94 0%, #6e19c2 100%) !important;
+    background-image: linear-gradient(45deg, #118f3a 0%, #6e19c2 100%) !important;
 }
 
 .bg-salvia-grad-alt {
-    background-image: linear-gradient(45deg, #6e19c2 0%, #3c1c94 100%) !important;
+    background-image: linear-gradient(45deg, #6e19c2 0%, #118f3a 100%) !important;
 }
 
 .bg-lungwort {
