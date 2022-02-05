@@ -44,7 +44,20 @@
         console.log()
         window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
     }
-    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let ref = document.referrer;
+        if(ref.includes("/mint")) {
+            document.querySelectorAll("a[href='/mint']")[0].click();
+        }
+        if(ref.includes("/gallery")) {
+            document.querySelectorAll("a[href='/gallery']")[0].click();
+        }
+        if(ref.includes("/myWallet")) {
+            document.querySelectorAll("a[href='/myWallet']")[0].click();
+        }
+    }, false);
+
 </script>
 
 <body>
