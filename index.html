@@ -36,14 +36,7 @@
 </head>
 
 <script>
-
-    window.addEventListener('error', e => {
-    // prompt user to confirm refresh
-    if (/Loading chunk [\d]+ failed/.test(e.message)) {
-        window.location.reload();
-    }
-    });
-
+    
     window.onload = function() {
         console.log(localStorage.getItem("reloaded"));
         localStorage.setItem("reloaded", "no");
