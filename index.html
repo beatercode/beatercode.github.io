@@ -36,25 +36,15 @@
 </head>
 
 <script>
-    
-    window.onload = function() {
-        console.log(localStorage.getItem("reloaded"));
-        localStorage.setItem("reloaded", "no");
-    }
 
     window.onbeforeunload = function() {
-        window.setTimeout(function () { 
-            localStorage.setItem("reloaded", "si");
+        window.setTimeout(function () {
             window.location = '/';
         }, 0);
         console.log()
         window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
     }
-
-    function clickMint() {
-        document.getElementsByClassName("btn btn-md btn-round btn-thin btn-primary btn-auto no-change")[0].click();
-    }
-
+    
 </script>
 
 <body>
