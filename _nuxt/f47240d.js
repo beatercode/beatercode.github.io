@@ -2367,7 +2367,7 @@
                     !0 !== e.data.show && So(e)
                 }
                 var jo = function(t) {
-                    var i, e, n = {},
+                    var i, e, n = {}, 
                         r = t.modules,
                         h = t.nodeOps;
                     for (i = 0; i < gr.length; ++i)
