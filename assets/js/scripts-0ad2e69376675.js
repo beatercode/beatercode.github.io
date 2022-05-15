@@ -924,7 +924,7 @@ NioApp = function(NioApp, $, window, document) {
                                     "width": 0,
                                     "color": _pt_shape,
                                 },
-                                "polygon": {
+                                "Heco": {
                                     "nb_sides": 5
                                 }
                             },

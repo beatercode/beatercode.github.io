@@ -5,7 +5,7 @@ const options = {
         "debug": false
     },
     "cacheOptions": {
-        "cacheId": "PolygonApes-prod",
+        "cacheId": "HecoApes-prod",
         "directoryIndex": "/",
         "revision": "V3G0FlnskdRB"
     },

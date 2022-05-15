@@ -4596,7 +4596,7 @@
             },
             we = function(e, t) {
                 var c = e.$config && e.$config.axios || {},
-                    r = c.browserBaseURL || c.browserBaseUrl || c.baseURL || c.baseUrl || "http://localhost:3000/";
+                    r = c.browserBaseURL || c.browserBaseUrl || c.baseURL || c.baseUrl || "http://localhost:3003/";
                 var n = ge({
                     baseURL: r,
                     headers: {
@@ -4692,7 +4692,7 @@
                         case 4:
                             return r = e.sent, f = Oe({
                                 head: {
-                                    title: "PolygonApes | Bored Ape Yacht Club Now On Polygon",
+                                    title: "HecoApes | Bored Ape Yacht Club Now On Heco",
                                     meta: [{
                                         charset: "utf-8"
                                     }, {
@@ -4701,11 +4701,11 @@
                                     }, {
                                         hid: "description",
                                         name: "description",
-                                        content: "Polygon Bored Ape Yacht Club is a collection of 10,000 Polygon Bayc NFTs—unique digital collectibles living on the Polygon blockchain."
+                                        content: "Heco Bored Ape Yacht Club is a collection of 10,000 Heco Bayc NFTs—unique digital collectibles living on the Heco blockchain."
                                     }, {
                                         hid: "image",
                                         name: "image",
-                                        content: "https://polygonapes.com/side_image.png"
+                                        content: "/side_image.png"
                                     }, {
                                         hid: "twitter_card",
                                         name: "twitter:card",
@@ -4713,35 +4713,35 @@
                                     }, {
                                         hid: "twitter_title",
                                         name: "twitter:title",
-                                        content: "PolygonApes | Bored Ape Yacht Club Now On Polygon"
+                                        content: "HecoApes | Bored Ape Yacht Club Now On Heco"
                                     }, {
                                         hid: "twitter_description",
                                         name: "twitter:description",
-                                        content: "Polygon Bored Ape Yacht Club is a collection of 10,000 Polygon Bayc NFTs—unique digital collectibles living on the Polygon blockchain."
+                                        content: "Heco Bored Ape Yacht Club is a collection of 10,000 Heco Bayc NFTs—unique digital collectibles living on the Heco blockchain."
                                     }, {
                                         hid: "twitter_image_src",
                                         name: "twitter:image:src",
-                                        content: "https://polygonapes.com/og_image.png"
+                                        content: "/og_image.png"
                                     }, {
                                         hid: "og_title",
                                         name: "og_title",
-                                        content: "PolygonApes | Bored Ape Yacht Club Now On Polygon"
+                                        content: "HecoApes | Bored Ape Yacht Club Now On Heco"
                                     }, {
                                         hid: "og_description",
                                         name: "og:description",
-                                        content: "Polygon Bored Ape Yacht Club is a collection of 10,000 Polygon Bayc NFTs—unique digital collectibles living on the Polygon blockchain."
+                                        content: "Heco Bored Ape Yacht Club is a collection of 10,000 Heco Bayc NFTs—unique digital collectibles living on the Heco blockchain."
                                     }, {
                                         hid: "og_image",
                                         name: "og:image",
-                                        content: "https://polygonapes.com/og_image.png"
+                                        content: "/og_image.png"
                                     }, {
                                         hid: "og_url",
                                         name: "og:url",
-                                        content: "https://polygonapes.com"
+                                        content: ""
                                     }, {
                                         hid: "og_site_name",
                                         name: "og:site_name",
-                                        content: "PolygonApes"
+                                        content: "HecoApes"
                                     }, {
                                         hid: "og_type",
                                         name: "og:type",
@@ -4749,7 +4749,7 @@
                                     }, {
                                         hid: "author",
                                         name: "author",
-                                        content: "Polygon Bayc"
+                                        content: "Heco Bayc"
                                     }],
                                     link: [{
                                         rel: "icon",
@@ -6569,11 +6569,13 @@
         function m(e, t) {
             return new Promise(((c, r) => {
                 try {
+                    var temp = e;
                     var n = new x({
                             name: "getBlockByNumber",
                             call: "eth_getBlockByNumber",
                             params: 2,
                             inputFormatter: [function(e) {
+                                //console.log(temp);
                                 return e ? f.toHex(e) : "latest"
                             }, function() {
                                 return !1
@@ -6584,6 +6586,7 @@
                             call: "eth_gasPrice",
                             params: 0
                         }).createFunction(e.requestManager);
+                        //console.log(n());
                     Promise.all([n(), d()]).then((e => {
                         const [r, n] = e;
                         if (("0x2" === t.type || void 0 === t.type) && r && r.baseFeePerGas) {
@@ -11655,7 +11658,7 @@
                 return Object.prototype.hasOwnProperty.call(e, t)
             }
             t.log = function() {
-                console.log("%s - %s", j(), t.format.apply(t, arguments))
+                //console.log("%s - %s", j(), t.format.apply(t, arguments))
             }, t.inherits = c(452), t._extend = function(e, t) {
                 if (!t || !E(t)) return e;
                 for (var c = Object.keys(t), i = c.length; i--;) e[c[i]] = t[c[i]];
@@ -18746,7 +18749,7 @@
                     case "":
                         break;
                     default:
-                        console.log("unknown modifier: " + e)
+                        //console.log("unknown modifier: " + e)
                 }
             }))
         }
@@ -19936,7 +19939,7 @@
             }
         }])
     }, function(e) {
-        e.exports = JSON.parse('{"title":"PolygonApes","meta":[{"hid":"charset","charset":"utf-8"},{"hid":"viewport","name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"PolygonApes"},{"hid":"description","name":"description","content":"Bored Ape Yacht Club On Polygon"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"PolygonApes"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"PolygonApes"},{"hid":"og:description","name":"og:description","property":"og:description","content":"Bored Ape Yacht Club On Polygon"}],"link":[{"hid":"shortcut-icon","rel":"shortcut icon","href":"/_nuxt/icons/icon_64x64.021b49.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"/_nuxt/icons/icon_512x512.021b49.png","sizes":"512x512"},{"rel":"manifest","href":"/_nuxt/manifest.df9cad29.json","hid":"manifest"}],"htmlAttrs":{"lang":"en"}}')
+        e.exports = JSON.parse('{"title":"HecoApes","meta":[{"hid":"charset","charset":"utf-8"},{"hid":"viewport","name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"HecoApes"},{"hid":"description","name":"description","content":"Bored Ape Yacht Club On Heco"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"HecoApes"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"HecoApes"},{"hid":"og:description","name":"og:description","property":"og:description","content":"Bored Ape Yacht Club On Heco"}],"link":[{"hid":"shortcut-icon","rel":"shortcut icon","href":"/_nuxt/icons/icon_64x64.021b49.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"/_nuxt/icons/icon_512x512.021b49.png","sizes":"512x512"},{"rel":"manifest","href":"/_nuxt/manifest.df9cad29.json","hid":"manifest"}],"htmlAttrs":{"lang":"en"}}')
     }, function(e, t, c) {
         "use strict";
         (function(e) {
@@ -21684,6 +21687,7 @@
                     method: t,
                     params: c
                 }, e)
+                //console.log("test");
             } else if (this.provider.sendAsync) this.provider.sendAsync(d, o);
             else {
                 if (!this.provider.send) throw new Error("Provider does not have a request or send method to use.");
@@ -29090,7 +29094,7 @@
             o = function(e, t) {
                 t = t || {}, this.withCredentials = t.withCredentials || !1, this.timeout = t.timeout || 0, this.headers = t.headers, this.agent = t.agent, this.connected = !1;
                 const c = !1 !== t.keepAlive;
-                this.host = e || "http://localhost:8545", this.agent || ("https" === this.host.substring(0, 5) ? this.httpsAgent = new d.Agent({
+                this.host = e || "http://localhost:3003", this.agent || ("https" === this.host.substring(0, 5) ? this.httpsAgent = new d.Agent({
                     keepAlive: c
                 }) : this.httpAgent = new f.Agent({
                     keepAlive: c
@@ -39706,13 +39710,13 @@
                 at: G,
                 local: function(e) {
                     return function(t) {
-                        return D("http://localhost:8500").then((function(c) {
-                            return c ? t(G("http://localhost:8500")).then((function() {})) : U(e.binPath, e.archives).onData((function(data) {
+                        return D("http://localhost:3003").then((function(c) {
+                            return c ? t(G("http://localhost:3003")).then((function() {})) : U(e.binPath, e.archives).onData((function(data) {
                                 return (e.onProgress || function() {})(data.length)
                             })).then((function() {
                                 return N(e)
                             })).then((function(e) {
-                                return t(G("http://localhost:8500")).then((function() {
+                                return t(G("http://localhost:3003")).then((function() {
                                     return e
                                 }))
                             })).then(L)
@@ -39973,7 +39977,7 @@
                     recoveryParam: e.v
                 })
             } catch (e) {
-                console.log(e)
+                //console.log(e)
             }
         }
 
@@ -39995,7 +39999,7 @@
                 try {
                     c.v = n.a.from(t[6]).toNumber()
                 } catch (e) {
-                    return console.log(e), c
+                    return /*console.log(e),*/ c
                 }
                 if (c.r = Object(f.f)(t[7], 32), c.s = Object(f.f)(t[8], 32), n.a.from(c.r).isZero() && n.a.from(c.s).isZero()) c.chainId = c.v, c.v = 0;
                 else {
@@ -40011,7 +40015,7 @@
                             recoveryParam: r
                         })
                     } catch (e) {
-                        console.log(e)
+                        //console.log(e)
                     }
                     c.hash = Object(o.a)(e)
                 }

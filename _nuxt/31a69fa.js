@@ -114,7 +114,7 @@
             r(68), r(236), r(104), r(129), r(130), r(42), r(131), r(21), r(132), r(82), r(67), r(732);
             var l = {
                     head: {
-                        title: "PolygonApes | Gallery"
+                        title: "HecoApes | Gallery"
                     },
                     data: function() {
                         return {
@@ -1128,8 +1128,8 @@
                             staticClass: "team-photo team-photo-s3"
                         }, [r("img", {
                             attrs: {
-                                src: "/assets/BaycImages/poly/" + e.tokenId + ".png",
-                                alt: "Polygon Apes #" + e.tokenId
+                                src: "https://ipfs.io/ipfs/QmUhshkUwfeUPuMWRoecjhenPBjaSuHVevs5SAbSxo8bEe/" + e.tokenId + ".png",
+                                alt: "Thunder Zeta #" + e.tokenId
                             }
                         })]), t._v(" "), r("h5", {
                             staticClass: "team-name title title-md text-primary"

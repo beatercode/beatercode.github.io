@@ -1,6 +1,6 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [9], {
-        739: function(t, e, n) {
+        739: function (t, e, n) {
             var content = n(754);
             content.__esModule && (content = content.default), "string" == typeof content && (content = [
                 [t.i, content, ""]
@@ -9,7 +9,7 @@
                 sourceMap: !1
             })
         },
-        740: function(t, e, n) {
+        740: function (t, e, n) {
             var content = n(756);
             content.__esModule && (content = content.default), "string" == typeof content && (content = [
                 [t.i, content, ""]
@@ -18,32 +18,33 @@
                 sourceMap: !1
             })
         },
-        753: function(t, e, n) {
+        753: function (t, e, n) {
             "use strict";
             n(739)
         },
-        754: function(t, e, n) {
+        754: function (t, e, n) {
             var r = n(233)(!1);
             r.push([t.i, ".msg-alert{margin-top:20px;width:auto}", ""]), t.exports = r
         },
-        755: function(t, e, n) {
+        755: function (t, e, n) {
             "use strict";
             n(740)
         },
-        756: function(t, e, n) {
+        756: function (t, e, n) {
             var r = n(233)(!1);
-            r.push([t.i, ".bg-theme{background-color:#118f3a!important}.alert.alert-info.msg-alert{width:380px}.token-action.token-action-s2.flex-wrap.flex-sm-nowrap{display:block}", ""]), t.exports = r
+            r.push([t.i, ".bg-theme{background-color:#8f1156!important}.alert.alert-info.msg-alert{width:380px}.token-action.token-action-s2.flex-wrap.flex-sm-nowrap{display:block}", ""]), t.exports = r
         },
-        771: function(t, e, n) {
+        771: function (t, e, n) {
             "use strict";
             n.r(e);
             var r = n(14),
                 o = (n(55), n(104), {
                     name: "mint",
                     head: {
-                        title: "PolygonApes | Mint"
+                        title: "HecoApes | Mint"
                     },
-                    data: function() {
+                    data: function () {
+                        //console.log("Loading");
                         return {
                             walletStatus: !1,
                             apeLeft: 0,
@@ -59,27 +60,27 @@
                             expectedBlockTime: 1e3
                         }
                     },
-                    created: function() {
+                    created: function () {
                         var t = this;
-                        this.$walletManager.mintStart && setInterval((function() {
+                        this.$walletManager.mintStart && setInterval((function () {
                             t.loadApeLeft()
-                        }), 1e4), setInterval((function() {
-                            t.walletStatus = t.$walletManager.walletStatus, t.$walletManager.listenMMAccount()
+                        }), 1e4), setInterval((function () {
+                            t.walletStatus = t.$walletManager.walletStatus, t.$walletManager.listenMMAccount();
                         }), 1e3)
                     },
-                    mounted: function() {
+                    mounted: function () {
                         this.$walletManager.mintStart && this.loadApeLeft(), NioApp.components.docReady[21](jQuery), NioApp.components.winLoad[0](jQuery), NioApp.components.docReady[3](jQuery), NioApp.components.docReady[14](jQuery), NioApp.components.docReady[13](jQuery), NioApp.winLoad()
                     },
                     methods: {
-                        tryToConnect: function() {
+                        tryToConnect: function () {
                             this.connectingWallet = !0, this.$walletManager.tryToConnect(), this.walletStatus && (this.connectingWallet = !1)
                         },
-                        mintApe: function() {
+                        mintApe: function () {
                             var t = this;
                             return Object(r.a)(regeneratorRuntime.mark((function e() {
                                 var n, o;
-                                return regeneratorRuntime.wrap((function(e) {
-                                    for (;;) switch (e.prev = e.next) {
+                                return regeneratorRuntime.wrap((function (e) {
+                                    for (; ;) switch (e.prev = e.next) {
                                         case 0:
                                             if (!1 !== t.btn_loading) {
                                                 e.next = 22;
@@ -87,14 +88,16 @@
                                             }
                                             return t.transactionHash = null, t.showAlert = "", t.btn_loading = !0, t.box_msg = "", t.box_msg_danger = "", e.prev = 6, e.next = 9, t.$walletManager.getSelectedWallet();
                                         case 9:
-                                            n = e.sent, o = 50, t.$walletManager.startTestMarket && (o = .001), window.contract.methods.mint(t.fape_count).send({
+                                            n = e.sent, o = .01, window.web3 = window.web3./*givenProvider*/currentProvider, t.$walletManager.startTestMarket && (o = .001), window.contract.methods.mint(t.fape_count).send({
                                                 from: n,
-                                                value: window.web3Global.utils.toWei(t.fape_count * o + "")
-                                            }, function() {
+                                                value: window.web3Global.utils.toWei("" + t.fape_count * o)
+                                            }, function () {
                                                 var e = Object(r.a)(regeneratorRuntime.mark((function e(n, r) {
                                                     var o;
-                                                    return regeneratorRuntime.wrap((function(e) {
-                                                        for (;;) switch (e.prev = e.next) {
+                                                    return regeneratorRuntime.wrap((function (e) {
+                                                        //console.log("--- Arrived");
+                                                        //console.log(e);
+                                                        for (; ;) switch (e.prev = e.next) {
                                                             case 0:
                                                                 if (n ? (t.showAlert = "error", t.alertMessage = "Error: please check your wallet") : (t.showAlert = "success", t.alertMessage = "Your transaction has been broadcast to network please wait...!"), !r) {
                                                                     e.next = 11;
@@ -120,13 +123,13 @@
                                                         }
                                                     }), e)
                                                 })));
-                                                return function(t, n) {
+                                                return function (t, n) {
                                                     return e.apply(this, arguments)
                                                 }
                                             }()), e.next = 22;
                                             break;
                                         case 15:
-                                            e.prev = 15, e.t0 = e.catch(6), t.walletStatus = t.$walletManager.walletStatus, t.showAlert = "error", t.alertMessage = "Error on minting", t.btn_loading = !1, console.log(e.t0.message);
+                                            e.prev = 15, e.t0 = e.catch(6), t.walletStatus = t.$walletManager.walletStatus, t.showAlert = "error", t.alertMessage = "Error on minting", t.btn_loading = !1 /*, console.log(e.t0.message) */;
                                         case 22:
                                         case "end":
                                             return e.stop()
@@ -136,10 +139,10 @@
                                 ])
                             })))()
                         },
-                        tmp_mintApe: function() {
+                        tmp_mintApe: function () {
                             return Object(r.a)(regeneratorRuntime.mark((function t() {
-                                return regeneratorRuntime.wrap((function(t) {
-                                    for (;;) switch (t.prev = t.next) {
+                                return regeneratorRuntime.wrap((function (t) {
+                                    for (; ;) switch (t.prev = t.next) {
                                         case 0:
                                         case "end":
                                             return t.stop()
@@ -147,16 +150,16 @@
                                 }), t)
                             })))()
                         },
-                        loadApeLeft: function() {
+                        loadApeLeft: function () {
                             var t = this;
                             return Object(r.a)(regeneratorRuntime.mark((function e() {
-                                return regeneratorRuntime.wrap((function(e) {
-                                    for (;;) switch (e.prev = e.next) {
+                                return regeneratorRuntime.wrap((function (e) {
+                                    for (; ;) switch (e.prev = e.next) {
                                         case 0:
                                             setTimeout(Object(r.a)(regeneratorRuntime.mark((function e() {
                                                 var n;
-                                                return regeneratorRuntime.wrap((function(e) {
-                                                    for (;;) switch (e.prev = e.next) {
+                                                return regeneratorRuntime.wrap((function (e) {
+                                                    for (; ;) switch (e.prev = e.next) {
                                                         case 0:
                                                             return e.next = 2, window.contractGlobal.methods.getNotMintedAmount().call();
                                                         case 2:
@@ -178,14 +181,15 @@
                 }),
                 l = o,
                 c = (n(753), n(755), n(40)),
-                component = Object(c.a)(l, (function() {
+                component = Object(c.a)(l, (function () {
+                    //console.log(this.walletStatus);
                     var t = this,
                         e = t.$createElement,
                         n = t._self._c || e;
                     return n("div", [n("main", {
                         staticClass: "nk-pages tc-light"
                     }, [n("section", {
-                        staticClass: "section bg-theme tc-light ov-h "
+                        staticClass: "section bg-theme-mint tc-light ov-h "
                     }, [n("div", {
                         staticClass: "header-banner "
                     }, [n("div", {
@@ -209,7 +213,7 @@
                     }, [n("li", [n("a", {
                         staticClass: "btn btn-md btn-primary btn-outline",
                         attrs: {
-                            href: "https://polygonscan.com/address/" + this.$walletManager.myAddress + "/contracts",
+                            href: "https://hecoinfo.com/address/" + this.$walletManager.myAddress + "/contracts",
                             target: "_blank"
                         }
                     }, [t._v("Smart Contract")])]), t._v(" "), n("li", [n("nuxt-link", {
@@ -243,13 +247,13 @@
                         }
                     }, [n("p", {
                         staticClass: "text-black-50"
-                    }, [t._v("Checking Your Wallet")]), t._v(" "), n("button", {
+                    }, [t._v("Checking Your Wallet 2 | " + t.walletStatus + "")]), t._v(" "), n("button", {
                         staticClass: "btn btn-primary rounded",
                         attrs: {
                             type: "button"
                         },
                         on: {
-                            click: function(e) {
+                            click: function (e) {
                                 return t.tryToConnect()
                             }
                         }
@@ -266,7 +270,7 @@
                             type: "button"
                         },
                         on: {
-                            click: function(e) {
+                            click: function (e) {
                                 return t.tryToConnect()
                             }
                         }
@@ -278,7 +282,7 @@
                             type: "button"
                         },
                         on: {
-                            click: function(e) {
+                            click: function (e) {
                                 return t.mintApe()
                             }
                         }
@@ -291,10 +295,10 @@
                         }],
                         staticClass: "form-control",
                         on: {
-                            change: function(e) {
-                                var n = Array.prototype.filter.call(e.target.options, (function(t) {
+                            change: function (e) {
+                                var n = Array.prototype.filter.call(e.target.options, (function (t) {
                                     return t.selected
-                                })).map((function(t) {
+                                })).map((function (t) {
                                     return "_value" in t ? t._value : t.value
                                 }));
                                 t.fape_count = e.target.multiple ? n : n[0]
@@ -334,7 +338,7 @@
                         staticClass: "text-primary",
                         attrs: {
                             target: "_blank",
-                            href: "https://polygonscan.com/tx/" + t.transactionHash
+                            href: "https://hecoinfo.com/tx/" + t.transactionHash
                         }
                     }, [t._v("\n                            " + t._s(this.transactionHash.substr(0, 5)) + "\n                            ...\n                            " + t._s(this.transactionHash.substr(this.transactionHash.length - 4, this.transactionHash.length - 1)) + "\n                          ")]), t._v(" "), n("br"), t._v(" "), n("NuxtLink", {
                         staticClass: "mr-5 text-primary-alt",
@@ -350,7 +354,7 @@
                         staticClass: "text-primary",
                         attrs: {
                             target: "_blank",
-                            href: "https://polygonscan.com/tx/" + t.transactionHash
+                            href: "https://hecoinfo.com/tx/" + t.transactionHash
                         }
                     }, [t._v("\n                              " + t._s(this.transactionHash.substr(0, 5)) + "\n                              ...\n                              " + t._s(this.transactionHash.substr(this.transactionHash.length - 4, this.transactionHash.length - 1)) + "\n                            ")])]) : t._e(), t._v(" "), 1 != t.walletStatus ? n("button", {
                         staticClass: "btn btn-primary rounded",
@@ -358,7 +362,7 @@
                             type: "button"
                         },
                         on: {
-                            click: function(e) {
+                            click: function (e) {
                                 return t.tryToConnect()
                             }
                         }
@@ -367,7 +371,7 @@
                     }) : t._e()]) : t._e()]) : t._e()])])])])])])])]), t._v(" "), n("div", {
                         staticClass: "nk-ovm shape-q"
                     })])])])])
-                }), [function() {
+                }), [function () {
                     var t = this,
                         e = t.$createElement,
                         n = t._self._c || e;
@@ -375,8 +379,8 @@
                         staticClass: "cpn-head mt-0"
                     }, [n("h1", {
                         staticClass: "title title-thin title-xl-2  "
-                    }, [t._v("Mint Bored Ape Yacht Club On Polygon")])])
-                }, function() {
+                    }, [t._v("Mint Bored Ape Yacht Club On Heco")])])
+                }, function () {
                     var t = this,
                         e = t.$createElement,
                         n = t._self._c || e;
@@ -390,7 +394,7 @@
                         staticClass: " "
                     }, [n("a", {
                         attrs: {
-                            href: "https://t.me/polygonape",
+                            href: "https://t.me/hecoapes",
                             target: "_blank"
                         }
                     }, [n("em", {
@@ -399,13 +403,13 @@
                         staticClass: " "
                     }, [n("a", {
                         attrs: {
-                            href: "https://twitter.com/polygonapes",
+                            href: "https://twitter.com/HecoApes",
                             target: "_blank"
                         }
                     }, [n("em", {
                         staticClass: "social-icon fab fa-twitter"
                     })])])])])
-                }, function() {
+                }, function () {
                     var t = this,
                         e = t.$createElement,
                         n = t._self._c || e;
@@ -413,17 +417,17 @@
                         staticClass: "token-info-item token-info-item-s1"
                     }, [n("div", {
                         staticClass: "token-info-item-list"
-                    }, [n("span", [t._v("Token Price:")]), t._v(" "), n("h4", [t._v("1 NFT = 50 MATIC")])]), t._v(" "), n("div", {
+                    }, [n("span", [t._v("Token Price:")]), t._v(" "), n("h4", [t._v("1 NFT = 5 HT")])]), t._v(" "), n("div", {
                         staticClass: "token-info-item-list"
                     }, [n("span", [t._v("We Accept:")]), t._v(" "), n("h4", [n("img", {
                         attrs: {
-                            src: "/assets/images/polywhite.png",
+                            src: "/assets/images/black.png",
                             width: "25px"
                         }
                     }), t._v(" "), n("em", {
                         staticClass: "fa fa-dollar"
-                    }), t._v(" MATIC")])])])
-                }, function() {
+                    }), t._v(" HT")])])])
+                }, function () {
                     var t = this,
                         e = t.$createElement,
                         n = t._self._c || e;

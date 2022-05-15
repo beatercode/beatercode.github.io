@@ -1,7 +1,7 @@
 {
-  "name": "PolygonApes",
-  "short_name": "PolygonApes",
-  "description": "Bored Ape Yacht Club On Polygon",
+  "name": "HecoApes",
+  "short_name": "HecoApes",
+  "description": "Bored Ape Yacht Club On Heco",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.021b49.png",
